@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-function Form({ userData, handleChange, handleSubmit, showSuccessAlert }) {
+function FormforAddingPatients({ userData, handleChange, handleSubmit, showSuccessAlert }) {
   return (
       <div className="bg-gradient-to-b from-blue-500 via-blue-400 mt-5 flex items-center justify-center w-3/4 mx-auto pt-10 px-10 pb-5 rounded-3xl">
         <form className="w-full max-w-4xl" onSubmit={handleSubmit}>
@@ -21,8 +21,7 @@ function Form({ userData, handleChange, handleSubmit, showSuccessAlert }) {
             </svg>
             <span className="sr-only">Info</span>
             <div>
-              <span className="font-medium">Success alert!</span> User added
-              successfully.
+              <span className="font-medium">Ajouter! </span> Vous avez ajouté un patient avec succès.
             </div>
           </div>
         )}
@@ -150,4 +149,4 @@ function Form({ userData, handleChange, handleSubmit, showSuccessAlert }) {
   );
 }
 
-export default Form;
+export default FormforAddingPatients;

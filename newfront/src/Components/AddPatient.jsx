@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Form from "./Form";
+import FormforAddingPatients from "./FormforAddingPatients";
 import {useNavigate} from 'react-router-dom'
 
 function AddPatient() {
@@ -60,7 +60,7 @@ const handleChange = (event) => {
 
   return (
     <div>
-      <Form
+      <FormforAddingPatients
         userData={userData}
         handleChange={handleChange}
         handleSubmit={handleSubmit}

@@ -22,7 +22,7 @@ const CertificateForm = () => {
   }, [startDate, endDate]);
 
   return (
-    <div className="flex justify-center items-stretch bg-blue-50 p-4 rounded-lg h-full mt-10">
+    <div className="flex flex-wrap justify-center items-stretch bg-blue-50 p-4 rounded-lg h-full mt-10">
       <div className="w-full h-screen md:w-1/3 bg-white shadow-lg border rounded-md mt-10 ml-10 p-7">
         <h1 className="text-2xl font-bold mb-4">Generate Medical Certificate</h1>
         <form className="space-y-4">

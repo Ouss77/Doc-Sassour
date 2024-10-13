@@ -13,11 +13,13 @@ router.get('/visits', async (req, res) => {
   });
 // Endpoint to add a visit
 router.post('/addVisit', async (req, res) => {
-    const { nom, prenom } = req.body;
+    const { nom, prenom, motif, patientId } = req.body;
     try {
         const newVisit = new Visit({
             nom,
             prenom,
+            patientId,
+            motif,
             dateVisited: new Date()  // Automatically sets to current date/time
         });
         await newVisit.save();
@@ -42,6 +44,21 @@ router.delete('/removeVisit', async (req, res) => {
         console.error('Failed to remove visit', error);
         res.status(500).json({ message: 'Failed to remove visit' });
     }
+});
+
+router.patch('/updateMotif', async (req, res) => {
+
+    const { id, motif } = req.body;
+    try {
+        const visit = await Visit.findByIdAndUpdate(id, { motif: motif }, { new: true });   
+        if (!visit) {
+            return res.status(404).json({ message: 'Visit not found' });
+        }
+        res.json({ message: 'Motif updated successfully' });
+    } catch (error) {
+        console.error('Failed to update motif', error);
+        res.status(500).json({ message: 'Failed to update motif' });
+    }   
 });
 
 

@@ -39,9 +39,8 @@ function Contact() {
                         </div>
                       </div>
                       <div className="ml-4">
-                        <p className="mb-2 font-bold dark:text-white">Technical support</p>
-                        <p className="text-neutral-500 dark:text-neutral-200">support@example.com</p>
-                        <p className="text-neutral-500 dark:text-neutral-200">+1 234-567-89</p>
+                        <p className="mb-2 font-bold dark:text-white">Prendre un rendez vous</p>
+                        <p className="text-neutral-500 dark:text-neutral-200">+212661255857</p>
                       </div>
                     </div>
                   </div>
@@ -66,39 +65,13 @@ function Contact() {
                         </div>
                       </div>
                       <div className="ml-4">
-                        <p className="mb-2 font-bold dark:text-white">Sales questions</p>
-                        <p className="text-neutral-500 dark:text-neutral-200">sales@example.com</p>
-                        <p className="text-neutral-500 dark:text-neutral-200">+1 234-567-89</p>
+                        <p className="mb-2 font-bold dark:text-white">Consultation en ligne</p>
+                        <p className="text-neutral-500 dark:text-neutral-200">mohammedsassour@gmail.com</p>
+                        <p className="text-neutral-500 dark:text-neutral-200">+212661255659</p>
                       </div>
                     </div>
                   </div>
-                  <div className="mb-6">
-                    <div className="flex items-start">
-                      <div className="shrink-0">
-                        <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="2"
-                            stroke="currentColor"
-                            className="h-6 w-6"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="ml-4">
-                        <p className="mb-2 font-bold dark:text-white">Press</p>
-                        <p className="text-neutral-500 dark:text-neutral-200">press@example.com</p>
-                        <p className="text-neutral-500 dark:text-neutral-200">+1 234-567-89</p>
-                      </div>
-                    </div>
-                  </div>
+
                   <div>
                     <div className="flex items-start">
                       <div className="shrink-0">
@@ -120,9 +93,8 @@ function Contact() {
                         </div>
                       </div>
                       <div className="ml-4">
-                        <p className="mb-2 font-bold dark:text-white">Bug report</p>
-                        <p className="text-neutral-500 dark:text-neutral-200">bugs@example.com</p>
-                        <p className="text-neutral-500 dark:text-neutral-200">+1 234-567-89</p>
+                        <p className="mb-2 font-bold dark:text-white">Adress</p>
+                        <p className="text-neutral-500 dark:text-neutral-200">Adress: angle bd Mohamed V et rue Ibn Batouta, étage 1 n°2, Guercif</p>
                       </div>
                     </div>
                   </div>

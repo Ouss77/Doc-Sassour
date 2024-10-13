@@ -13,6 +13,7 @@ function AddConsultation() {
       try {
         const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
         const response = await axios.get(`${apiUrl}api/visits`);
+        console.log(response.data)
         setQueue(response.data);
       } catch (error) {
         console.error("Failed to fetch queue", error);
@@ -20,30 +21,34 @@ function AddConsultation() {
     };
     fetchQueue();
   }, []);
+const handleAddToQueue = async (patient) => {
+  try {
+    const today = new Date().toISOString().split("T")[0];
+    const isAlreadyInQueue = queue.some(
+      (item) => item._id === patient._id && item.dateVisited.startsWith(today)
+    );
 
-  const handleAddToQueue = async (patient) => {
-    try {
-      const today = new Date().toISOString().split("T")[0];
-      const isAlreadyInQueue = queue.some(
-        (item) => item._id === patient._id && item.dateVisited.startsWith(today)
-      );
-
-      if (isAlreadyInQueue) {
-        console.log("Patient already in the queue for today.");
-        return;
-      }
-
-      const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
-      await axios.post(`${apiUrl}api/addVisit`, {
-        nom: patient.nom,
-        prenom: patient.prenom,
-      });
-      console.log("Visit added successfully");
-      setQueue([...queue, { ...patient, dateVisited: today }]);
-    } catch (error) {
-      console.error("Failed to register visit", error);
+    if (isAlreadyInQueue) {
+      console.log("Patient already in the queue for today.");
+      return;
     }
-  };
+
+    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
+    await axios.post(`${apiUrl}api/addVisit`, {
+      nom: patient.nom,
+      prenom: patient.prenom,
+      patientId: patient._id,
+      motif: "Controle",
+    });
+    console.log("Visit added successfully");
+
+    // Fetch the updated queue to reflect the new patient immediately
+    const response = await axios.get(`${apiUrl}api/visits`);
+    setQueue(response.data);
+  } catch (error) {
+    console.error("Failed to register visit", error);
+  }
+};
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-24 bg-white shadow-lg rounded-lg">
