@@ -1,7 +1,7 @@
 // Assuming Express.js
 const express = require('express');
 const router = express.Router();
-const Visit = require('./VisitModel');
+const Visit = require('../models/VisitModel');
 
 router.get('/visits', async (req, res) => {
     try {

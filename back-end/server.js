@@ -1,8 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const userRoutes = require('./UserRoutes');
-const visitRoutes = require('./VisitRoutes');
-const adminRoutes = require('./AdminRoutes');
+const userRoutes = require('./routes/UserRoutes');
+const visitRoutes = require('./routes/VisitRoutes');
+const adminRoutes = require('./routes/AdminRoutes');
+const medicamentroutes = require('./routes/medicament.routes');
 const cors = require('cors');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
@@ -21,7 +22,8 @@ app.use(helmet());
 app.use(express.json());
 app.use('/api/users', userRoutes);
 app.use('/api', visitRoutes);
-app.use('/', adminRoutes);
+app.use('', medicamentroutes);
+app.use('', adminRoutes);
 
 // Connect to MongoDB
 mongoose.connect(uri)

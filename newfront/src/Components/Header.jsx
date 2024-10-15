@@ -134,6 +134,18 @@ const Header = () => {
                     Ordonnance
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/Medicament"
+                    className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 ${
+                      activePage === '/Medicament'
+                        ? 'text-white dark:text-white'
+                        : 'text-gray-900 dark:text-gray-400'
+                    }`}
+                  >
+                    Medicament
+                  </Link>
+                </li>
               </>
             )}
             <li>

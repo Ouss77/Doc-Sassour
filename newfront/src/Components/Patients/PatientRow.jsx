@@ -59,3 +59,5 @@ function PatientRow({ user, handleDelete, displayPatient, handleMedicalInfo, han
 }
 
 export default PatientRow;
+
+

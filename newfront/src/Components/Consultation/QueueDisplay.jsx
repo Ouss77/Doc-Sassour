@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import PatientDetails from "../PatientDetails";
-import AddPatientDetails from "../AddPatientDetails";
+import PatientDetails from "../Patients/PatientDetails";
+import AddPatientDetails from "../Patients/AddPatientDetails";
 
 function QueueDisplay({ queue, setQueue }) {
   const [showPatientDetails, setShowPatientDetails] = useState(false);

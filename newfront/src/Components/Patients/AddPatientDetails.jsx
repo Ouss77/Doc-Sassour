@@ -71,6 +71,7 @@ function AddPatientDetails({userId, onCancel}) {
               Mutuelle
             </label>
             <input
+            required
               className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-status"
               type="text"
@@ -88,6 +89,7 @@ function AddPatientDetails({userId, onCancel}) {
               Motif
             </label>
             <input
+            required
               className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-motif"
               name="motif"
@@ -109,6 +111,7 @@ function AddPatientDetails({userId, onCancel}) {
               traitement
             </label>
             <input
+            required
               className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white h-20"
               id="grid-full-name"
               type="text"
@@ -126,6 +129,7 @@ function AddPatientDetails({userId, onCancel}) {
               Diagnostic
             </label>
             <input
+            required
               className="appearance-none h-20 block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-telephone"
               type="text"

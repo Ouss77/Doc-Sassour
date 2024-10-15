@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import Header from "../Components/Header";
-import TableHeader from "../Components/TableHeader";
+import TableHeader from "../Components/Patients/TableHeader";
 
 
 function Patient() {

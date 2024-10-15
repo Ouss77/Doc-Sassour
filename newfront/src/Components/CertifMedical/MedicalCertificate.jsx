@@ -4,7 +4,7 @@ import jsPDF from 'jspdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStethoscope } from '@fortawesome/free-solid-svg-icons';
 
-const MedicalCertificate = ({ date, name, cin, days, startDate, endDate }) => {
+const MedicalCertificate = ({ date, name, cin, days, startDate, endDate, medicament, medicamentForme }) => {
   const certificateRef = useRef();
 
   const handleDownloadPDF = () => {
@@ -38,7 +38,6 @@ const MedicalCertificate = ({ date, name, cin, days, startDate, endDate }) => {
 
   return (
     <div>
-      {/* This is the content to be rendered as PDF */}
       <div
         ref={certificateRef}
         className="p-4 max-w-[148mm] mx-auto bg-white shadow-md rounded-md border h-screen"
@@ -54,9 +53,9 @@ const MedicalCertificate = ({ date, name, cin, days, startDate, endDate }) => {
             <p className="text-sm">N°2, 1er étage, angle Bdouvaud Mohamed V et Ibn Battouta, Guercif</p>
             <p className="text-sm">Tel: 0672231406 / 0661255659</p>
           </div>
-          <div className="text-center my-4">
+          {/* <div className="text-center my-4">
             <FontAwesomeIcon icon={faStethoscope} className="text-black text-6xl mx-4" />
-          </div>
+          </div> */}
           <div className="text-right">
             <h1 className="text-lg font-bold">الدكتور ساسور محمد</h1>
             <p className="text-sm">طبيب عسكري لـ كولونيل سابقًا</p>
@@ -77,6 +76,7 @@ const MedicalCertificate = ({ date, name, cin, days, startDate, endDate }) => {
           <p className="mb-4 text-sm">CIN: <span className="font-bold">{cin}</span></p>
           <p className="mb-4 text-sm">Son état de santé nécessite un traitement médical et un repos de</p>
           <p className="mb-4 font-bold text-lg"><span className="underline">{days}</span> jours valables du <span className="underline">{startDate}</span> au <span className="underline">{endDate}</span> inclus sauf complications.</p>
+          <p className="mb-4 text-sm">Le malade doit prendre: {medicament}( {medicamentForme} ) </p>
           <p className="mb-8 text-sm">Certificat établi à la demande de l’intéressé(e) pour servir et valoir ce que de doit.</p>
         </div>
       </div>

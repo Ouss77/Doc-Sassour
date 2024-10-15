@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Patient = require('./UserModel');
+const Patient = require('../models/UserModel');
 
 router.post('/', async (req, res) => {
   try {
@@ -36,6 +36,30 @@ router.get('/', async (req, res) => {
   }
 });
 
+//get users CIN from name and surname
+router.get('/getPatienCIN', async (req, res) => {
+  try {
+    const { nom, prenom } = req.query; // Get nom and prenom from query parameters
+
+    if (!nom || !prenom) {
+      return res.status(400).json({ message: 'Nom and prenom are required' });
+    }
+
+    // Find the patient by nom and prenom
+    const patient = await Patient.findOne({ nom: nom, prenom: prenom }, 'CIN');
+
+    if (!patient) {
+      return res.status(404).json({ message: 'Patient not found' });
+    }
+
+    // Return the patient's ID
+    res.json({ cin: patient.CIN });
+  } catch (error) {
+    console.error('Error retrieving patient CIN:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 router.get('/getPatientId', async (req, res) => {
   try {
     const { nom, prenom } = req.query; // Get nom and prenom from query parameters
@@ -58,11 +82,11 @@ router.get('/getPatientId', async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 });
-//Search patients by name
+//Search patients by id
 router.get('/medicalInfo/:patientId', async (req, res) => {
   try {
     const patientId = req.params.patientId;
-    const patient = await Patient.findById(patientId, 'medicalInfos');  // Select only the medicalInfos field
+    const patient = await Patient.findById(patientId, 'medicalInfos'); 
 
     if (!patient) {
       return res.status(404).json({ message: 'Patient not found' });
