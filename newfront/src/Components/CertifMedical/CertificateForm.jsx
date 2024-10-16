@@ -4,6 +4,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import moment from 'moment';
 import MedicalCertificate from './MedicalCertificate';
 import axios from 'axios';
+import MedicamentTable from '../Medicament/MedicamentTable';
+import { Link } from 'react-router-dom';
 
 const CertificateForm = () => {
 
@@ -118,8 +120,16 @@ const CertificateForm = () => {
     setMedicamentForme(med.FORME); // Store the medication's form
     setFilteredMedicaments([]); // Clear the suggestions
   };
+
   return (
-    <div className="flex flex-wrap justify-center items-stretch bg-blue-50 p-4 rounded-lg h-full mt-10">
+    <div className="flex flex-wrap justify-center items-stretch bg-blue-50 p-4 rounded-lg mt-10 bg-[url('./assets/doc.jpg')] h-auto  bg-cover">
+        <Link
+        to={`/Medicament`}
+          type="button"
+          className="bg-blue-500 h-10 mt-10 p-2 rounded text-base hover:bg-blue-700"
+        >
+          Liste des medicaments
+        </Link>
       <div className="w-full h-screen md:w-1/3 bg-white shadow-lg border rounded-md mt-10 ml-10 p-7">
         <h1 className="text-2xl font-bold mb-4">Generate Medical Certificate</h1>
         <form className="space-y-4">

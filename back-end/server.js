@@ -3,10 +3,13 @@ const mongoose = require('mongoose');
 const userRoutes = require('./routes/UserRoutes');
 const visitRoutes = require('./routes/VisitRoutes');
 const adminRoutes = require('./routes/AdminRoutes');
+const appointment = require('./routes/Apointment.routes');
 const medicamentroutes = require('./routes/medicament.routes');
+
 const cors = require('cors');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
+const Appointment = require('./models/Apointment.model');
 require('dotenv').config();
 
 const app = express();
@@ -24,6 +27,7 @@ app.use('/api/users', userRoutes);
 app.use('/api', visitRoutes);
 app.use('', medicamentroutes);
 app.use('', adminRoutes);
+app.use('', appointment);
 
 // Connect to MongoDB
 mongoose.connect(uri)

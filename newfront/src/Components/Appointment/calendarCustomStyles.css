@@ -1,0 +1,84 @@
+/* General Calendar Styles */
+.react-calendar {
+    width: 100%;
+    max-width: 640px; /* Adjust based on your layout needs */
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: auto;
+  }
+  
+  /* Navigation styling */
+  .react-calendar__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .react-calendar__navigation button {
+    color: black;
+    background-color: transparent;
+    font-size: 1.25rem;
+    padding: 0.25rem 0.75rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .react-calendar__navigation button:disabled {
+    background-color: transparent;
+    color: grey;
+  }
+  
+  /* Styling for the month, year dropdowns */
+  .react-calendar__navigation__label {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+  
+  .react-calendar__month-view__days__day {
+    padding: 0.5rem 0;
+    font-weight: 500;
+  }
+  
+  /* Hover and active styles for days */
+  .react-calendar__tile:hover,
+  .react-calendar__tile--active,
+  .react-calendar__tile--hasActive {
+    background-color: #3182ce; /* Tailwind blue-500 */
+    color: white;
+  }
+  
+  .react-calendar__tile--active,
+  .react-calendar__tile--hasActive {
+    color: white;
+  }
+  
+  /* Style adjustments for "neighboringMonth" days (prev/next month's days shown) */
+  .react-calendar__month-view__days__day--neighboringMonth {
+    color: #cbd5e0; /* Tailwind gray-300 */
+  }
+  
+  /* Today's date styling */
+  .react-calendar__tile--now {
+    background-color: #bee3f8; /* Tailwind blue-200 */
+    font-weight: 700;
+  }
+  
+  /* Adjusting week days (Sun, Mon, etc.) styling */
+  .react-calendar__month-view__weekdays {
+    text-align: center;
+    color: #4a5568; /* Tailwind gray-700 */
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  
+  /* Borders for separation */
+  .react-calendar__month-view__days,
+  .react-calendar__year-view__months,
+  .react-calendar__decade-view__years,
+  .react-calendar__century-view__decades {
+    border-top: 1px solid #e2e8f0; /* Tailwind gray-200 */
+  }
+  

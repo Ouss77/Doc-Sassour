@@ -11,6 +11,7 @@ import { AuthProvider } from './Components/Login/AuthContext';
 import PrivateRoute from './Components/Login/PrivateRoute';
 import Ordonance from './Pages/Ordonance';	 
 import MedicamentTable from './Components/Medicament/MedicamentTable';
+import MedicalAppointment from './Components/Appointment/MedicalAppointment';
 const App = () => {
   return (
     <AuthProvider>
@@ -19,8 +20,9 @@ const App = () => {
         <Route path="/" element={<Home />} />   
           <Route path="/Contact" element={<Contact />} />  
            <Route path="/About" element={<About />} />  
-          <Route path="/Medicament" element={<MedicamentTable />} />  
-        <Route path="/login" element={<Login />} />
+           <Route path="/Medicament" element={<MedicamentTable />} />  
+           <Route path="/MedicalAppointment" element={<MedicalAppointment />} />  
+           <Route path="/login" element={<Login />} />
 
         {/* Protected routes */}
         <Route element={<PrivateRoute />}>

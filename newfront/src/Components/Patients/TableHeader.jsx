@@ -59,7 +59,7 @@ function TableHeader({ displayComponent, setDisplayComponent }) {
   };
 
   return (
-    <div className="bg-[url('./assets/doc.jpg')] h-screen bg-no-repeat bg-cover">
+    <div className="bg-[url('./assets/doc.jpg')] h-auto bg-no-repeat bg-cover">
       <section className="flex items-center dark:bg-gray-900">
         <div className="w-auto max-w-screen-xl px-4 mx-auto lg:px-12 pt-20 md:w-2/3">
           <div className="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
