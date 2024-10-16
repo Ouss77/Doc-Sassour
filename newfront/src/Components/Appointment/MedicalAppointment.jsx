@@ -76,7 +76,7 @@ const MedicalAppointment = () => {
               className={`w-full py-2 px-4 rounded-lg shadow-md text-white font-bold ${appointments[time] ? 'bg-red-500' : 'bg-green-500 hover:bg-green-700'}`}
               onClick={() => {
                 if (!appointments[time]) {
-                  const note = prompt(`Enter note for ${time}`);
+                  const note = prompt(`Enter le nom du patient for ${time}`);
                   if (note) {
                     addAppointment(time, note);
                   }

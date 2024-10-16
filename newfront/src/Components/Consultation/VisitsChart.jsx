@@ -9,6 +9,7 @@
 // ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 // const VisitsChart = () => {
+//   console.log('VisitsChart');
 //   const [visitsData, setVisitsData] = useState([]);
 //   const [startDate, setStartDate] = useState(null);
 //   const [endDate, setEndDate] = useState(null);
@@ -111,13 +112,4 @@
 //   );
 // };
 
-// export default VisitsChart;
-import React from 'react'
-
-function VisitsChart() {
-  return (
-    <div>VisitsChart</div>
-  )
-}
-
-export default VisitsChart
+// export	default	VisitsChart;
