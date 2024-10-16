@@ -11,6 +11,8 @@ function PatientDetails({ id, onClose }) {
         if (id) {
           console.log(id)
           const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
+          console.log(apiUrl); // Check what the value is
+
           const response = await axios.get(`${apiUrl}api/users/medicalInfo/${id}`);
         
           setPatients(response.data);
