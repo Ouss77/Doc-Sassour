@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PatientSearch from "./PatientSearch";
 import QueueDisplay from "./QueueDisplay";
-import VisitsChart from "./VisitsChart";
+// import VisitsChart from "./VisitsChart";
 
 function AddConsultation() {
   const [showQueue, setShowQueue] = useState(true); // Initially show Queue
